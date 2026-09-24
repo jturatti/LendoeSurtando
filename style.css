@@ -105,7 +105,7 @@ nav ul {
     align-items: center;
     text-align: center;
     padding: 60px 20px;
-    background-image: url("imagem/fundotitulohome.jpg");
+    background-image: url("imagem/index/fundotitulohome.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -224,6 +224,12 @@ nav ul {
     grid-template-columns:
         repeat(auto-fit, minmax(240px, 1fr));
     gap: clamp(20px, 3vw, 35px);
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    /*immpede que o scroll horizontal seja cortado em telas pequenas*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .card {
@@ -234,6 +240,7 @@ nav ul {
     overflow: hidden;
     background: rgba(14, 2, 5, 0.35);
     transition: 0.4s;
+    scroll-snap-align: start;
 }
 
 .card:hover {
@@ -282,7 +289,7 @@ nav ul {
     border: 1px solid var(--ouro);
     padding: clamp(30px, 5vw, 50px);
     background-image:
-        url("imagem/fundofrasehome.jpg");
+        url("imagem/index/fundofrasehome.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -398,8 +405,16 @@ footer h4 {
         padding: 50px 20px;
     }
 
+    .cards {
+        gap: 20px;
+        padding: 50px 10vw 35px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
     .card {
         border-radius: 100px 100px 0 0;
+        flex: 0 0  75vw;
     }
 
     .quote-box {
