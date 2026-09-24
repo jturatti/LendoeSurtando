@@ -529,6 +529,22 @@ footer h4 {
 
 @media (max-width: 600px) {
 
+     header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+    .logo-icon {
+        width: 75px;
+        margin-right: 0;
+    }
+    nav ul {
+        gap: 12px 20px;
+    }
+    .nav-link::before {
+        top: 22px;
+    }
+    
     .hobbies-section {
         padding: 90px 20px 50px;
     }
