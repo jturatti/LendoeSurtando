@@ -1,0 +1,325 @@
+:root {
+    --preto: #090909;
+    --preto-suave: #100d0d;
+
+    --vinho: #2b0914;
+    --vinho-claro: #421321;
+
+    --ouro: #d4af37;
+    --ouro-claro: #e5c56a;
+
+    --creme: #f5e6c8;
+    --texto: #d8bd91;
+
+    --borda: rgba(212, 175, 55, 0.55);
+}
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(circle, var(--vinho) 0%, var(--preto) 70%);
+    color: var(--creme);
+    font-family: 'Cormorant Garamond', serif;
+    overflow-x: hidden;
+}
+/* =========================
+   HEADER
+========================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+    padding: 5px clamp(20px, 5vw, 80px);
+    border-bottom: 1px solid var(--ouro);
+   
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+}
+
+.logo-icon {
+    width: clamp(70px, 8vw, 100px);
+    height: auto;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(15px, 3vw, 50px);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--ouro);
+    font-size: clamp(16px, 1.5vw, 20px);
+    position: relative;
+    transition: color 0.4s;
+}
+
+.nav-link:hover {
+    transform: translateY(-5px);
+    text-shadow:
+        0 0 20px rgba(212, 175, 55, 0.3);
+}
+/* =========================
+   SUBLINHADO DO MENU
+========================= */
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--ouro) 50%,
+        transparent
+    );
+    filter: blur(2px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    opacity: 1;
+}
+
+
+/* ==========================
+   LINKS
+========================== */
+
+.links {
+    width: 100%;
+    min-height: 80vh;
+    padding: 70px 8% 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #f5e6c8;
+}
+
+/* Título e ornamentos */
+
+.links h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    color: #d4af37;
+    margin: 15px 0;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.links .ornamento {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    margin: 10px 0;
+}
+
+.links > p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    line-height: 1.6;
+    color: #e2d4c3;
+    margin: 15px 0 45px;
+}
+
+/* Títulos das categorias */
+
+.links h2 {
+    width: 100%;
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #d4af37;
+    margin: 35px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.15);
+}
+
+/* Container dos links */
+
+.links-container {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+/* Cards individuais */
+
+.link-item {
+    width: 100%;
+    background: linear-gradient(
+        100deg,
+        rgba(60, 19, 34, 0.9),
+        rgba(20, 12, 16, 0.95)
+    );
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.link-item a {
+    width: 100%;
+    min-height: 65px;
+    padding: 15px 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    text-decoration: none;
+    color: #f5e6c8;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.link-item:hover {
+    transform: translateX(5px);
+    border-color: #d4af37;
+    box-shadow: 0 4px 18px rgba(212, 175, 55, 0.15);
+}
+
+.link-item:hover a {
+    color: #d4af37;
+}
+
+.link-item:hover i {
+    transform: scale(1.15);
+    color: #d4af37;
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+    width: 100%;
+    padding: 25px 15px;
+    text-align: center;
+    background: rgba(9, 9, 9, 0.95);
+    border-top: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+footer h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #cbbba9;
+    margin: 0;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+/* Tablets */
+
+@media (max-width: 900px) {
+    .links {
+        padding: 60px 6% 70px;
+    }
+
+    .links-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .links h1 {
+        font-size: 2.6rem;
+    }
+}
+
+/* Celulares */
+
+@media (max-width: 550px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+    .logo-icon {
+        width: 75px;
+        margin-right: 0;
+    }
+    nav ul {
+        gap: 12px 20px;
+    }
+    .nav-link::before {
+        top: 22px;
+    }
+    
+    .links {
+        padding: 45px 5% 60px;
+    }
+
+    .links h1 {
+        font-size: 2.2rem;
+    }
+
+    .links h2 {
+        font-size: 1.25rem;
+        margin: 28px 0 16px;
+    }
+
+    .links > p {
+        font-size: 1.15rem;
+        margin-bottom: 30px;
+    }
+
+    .links-container {
+        max-width: 100%;
+        gap: 12px;
+    }
+
+    .link-item a {
+        min-height: 58px;
+        padding: 12px 16px;
+        font-size: 1.15rem;
+        gap: 14px;
+    }
+
+    .link-item i {
+        font-size: 1.35rem;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+
+    footer h4 {
+        font-size: 0.9rem;
+    }
+}
