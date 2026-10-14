@@ -32,7 +32,7 @@ header {
     align-items: center;
     min-height: 100px;
     padding: 5px clamp(20px, 5vw, 80px);
-   
+    border-bottom: 1px solid var(--ouro);
 }
 
 .logo {
