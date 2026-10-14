@@ -110,7 +110,6 @@ nav ul {
 /* =========================
    HOBBIES
 ========================= */
-
 .hobbies-section {
     min-height: 100vh;
     padding: 110px 6% 70px;
@@ -125,9 +124,7 @@ nav ul {
     color: var(--creme);
 }
 
-
 /* CABEÇALHO */
-
 .hobbies-header {
     text-align: center;
     margin-bottom: 55px;
@@ -171,7 +168,6 @@ nav ul {
 .hobbies-grid {
     max-width: 1150px;
     margin: 0 auto;
-
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 25px;
@@ -179,41 +175,30 @@ nav ul {
 
 
 /* CARDS */
-
 .hobby-card {
     position: relative;
-
     padding: 45px 25px 25px;
-
     border: 1px solid rgba(212, 175, 55, 0.65);
-
     background:
         linear-gradient(
             rgba(10, 5, 6, 0.82),
             rgba(20, 7, 12, 0.9)
         );
-
     text-align: center;
-
     min-width: 0;
-
     transition: transform 0.3s ease,
                 border-color 0.3s ease,
                 box-shadow 0.3s ease;
 }
 
-
 /* 3 CARDS EM CIMA */
-
 .hobby-card:nth-child(1),
 .hobby-card:nth-child(2),
 .hobby-card:nth-child(3) {
     grid-column: span 2;
 }
 
-
 /* 2 CARDS EMBAIXO */
-
 .hobby-card:nth-child(4) {
     grid-column: 2 / span 2;
 }
@@ -222,205 +207,132 @@ nav ul {
     grid-column: 4 / span 2;
 }
 
-
 /* EFEITO */
-
 .hobby-card:hover {
     transform: translateY(-5px);
-
     border-color: var(--ouro);
-
     box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.7),
         0 0 15px rgba(212, 175, 55, 0.08);
 }
 
-
 /* ÍCONE */
-
 .hobby-icon {
     position: absolute;
-
     top: -27px;
     left: 50%;
-
     transform: translateX(-50%);
-
     width: 54px;
     height: 54px;
-
     border: 1px solid var(--ouro);
     border-radius: 50%;
-
     background: #0b0808;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 23px;
 }
 
-
 /* TÍTULO */
-
 .hobby-card h2 {
     font-family: "Cinzel", serif;
     font-size: 22px;
     font-weight: 500;
-
     color: var(--ouro);
-
     letter-spacing: 1px;
-
     margin: 5px 0 20px;
 }
 
-
 /* IMAGEM */
-
 .hobby-card img {
     width: 100%;
     height: 180px;
-
     object-fit: cover;
-
     display: block;
-
     margin-bottom: 18px;
-
     border: 1px solid rgba(212, 175, 55, 0.25);
-
     filter: brightness(0.7) saturate(0.75);
 }
 
-
 /* TEXTO */
-
 .hobby-card p {
     font-family: "Cormorant Garamond", serif;
-
     font-size: 18px;
     line-height: 1.35;
-
     color: #c7ae89;
-
     margin-bottom: 20px;
 }
 
-
 /* SUBTÍTULO */
-
 .hobby-card h3 {
     font-family: "Cinzel", serif;
-
     font-size: 14px;
     font-weight: 400;
-
     color: var(--ouro);
-
     letter-spacing: 1px;
-
     margin: 15px 0 10px;
 }
 
-
 /* LISTA */
-
 .hobby-card ul {
     list-style: none;
-
     padding: 0;
     margin: 0 auto 20px;
-
     text-align: left;
-
     max-width: 220px;
 }
 
 .hobby-card li {
     font-family: "Cormorant Garamond", serif;
-
     font-size: 17px;
-
     color: #c7ae89;
-
     margin: 5px 0;
 }
 
 .hobby-card li::before {
     content: "✦";
-
     color: var(--ouro);
-
     margin-right: 8px;
-
     font-size: 11px;
 }
-
-
 /* LINKS */
-
 .hobby-link {
     display: inline-block;
-
     margin-top: 5px;
-
     font-family: "Cinzel", serif;
-
     font-size: 12px;
-
     color: var(--ouro);
-
     text-decoration: none;
-
     border-bottom: 1px solid rgba(212, 175, 55, 0.5);
-
     padding-bottom: 3px;
-
     transition: 0.3s ease;
 }
-
 .hobby-link:hover {
     color: var(--creme);
-
     border-color: var(--creme);
 }
 
-
 /* FRASE FINAL */
-
 .hobbies-footer {
     max-width: 900px;
-
     margin: 55px auto 0;
-
     padding-top: 30px;
-
     border-top: 1px solid rgba(212, 175, 55, 0.4);
-
     text-align: center;
 }
 
 .hobbies-footer p {
     font-family: "Cormorant Garamond", serif;
-
     font-size: 21px;
-
     font-style: italic;
-
     line-height: 1.4;
-
     color: #c9a878;
 }
 
 .hobbies-footer span {
     display: block;
-
     color: var(--ouro);
-
     font-size: 22px;
-
     margin-top: 10px;
 }
 
@@ -529,7 +441,7 @@ footer h4 {
 
 @media (max-width: 600px) {
 
-     header {
+    header {
         flex-direction: column;
         gap: 15px;
         padding: 15px 20px;
